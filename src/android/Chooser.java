@@ -120,13 +120,13 @@ public class Chooser extends CordovaPlugin {
 
 						String base64 = "";
 
-						if (data.getBooleanExtra(Chooser.INCLUDE_DATA, false)) {
+						// if (data.getBooleanExtra(Chooser.INCLUDE_DATA, false)) {
 							byte[] bytes = Chooser.getBytesFromInputStream(
 								contentResolver.openInputStream(uri)
 							);
 
 							base64 = Base64.encodeToString(bytes, Base64.DEFAULT);
-						}
+						// }
 
 						JSONObject result = new JSONObject();
 
