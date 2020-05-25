@@ -74,6 +74,7 @@ function getFileInternal (
 						o.data = from_base64(base64Data);
 						o.dataURI =
 							'data:' + o.mediaType + ';base64,' + base64Data;
+						o.size = parseInt((base64Data).replace(/=/g,"").length * 0.75));
 					}
 					else {
 						delete o.data;
